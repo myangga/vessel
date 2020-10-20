@@ -2,7 +2,7 @@
 
 ## Sails and Svelte
 
-# This is an experiment. Please don't use this for anything important!
+### This is an experiment. Please don't use this for anything important unless you know what you're doing!
 
 ## If you do want to use this, here's how to get going
 
@@ -56,7 +56,8 @@ The `docker-compose.yml` included in this project spins up a mongo image, which 
 
 This mongo container is then accessed via `mongodb://mongo/<databasename>`
 
-### Sails blueprint auto routes are on by default and schema has been turned off
+### Sails blueprint auto routes are on by default
+You can change these settings in `/api/config/blueprints.js`.
 
 Sails `config.blueprints.actions` and `config.blueprints.rest` are enabled by default. That means if you navigate to the `/api` folder and run `sails generate api hats` you'll be able to access the api at conventional REST endpoints:
 
@@ -66,6 +67,23 @@ POST: `http://localhost:1337/hats` -> creates a hat, returns the created documen
 PATCH: `http://localhost:1337/hats/abcdefg123` -> updates a hat, returns the updated document
 PUT: `http://localhost:1337/hats/abcdefg123` -> updates a hat, returns the updated document -- but Sails will tell you it prefers you to use `PATCH`
 DELETE: `http://localhost:1337/hats/abcdefg123` -> deletes a hat, returns the deleted document
+
+### Models config
+You can change these settings in `/api/config/models.js`
+
+Again, the defaults here have been set to get up and running as quickly as possible.
+
+`schema: false` can be changed to `true` when you want to start validating any data coming through.
+
+`migrate: alter` can be changed according to what you need. I don't know enough about Sails to mess with it yet.
+
+All newly created documents will have the following attributes added automatically, you can change the attributes you want to include as needed:
+
+```js
+createdAt: { type: 'number', autoCreatedAt: true, },
+updatedAt: { type: 'number', autoUpdatedAt: true, },
+id: { type: 'string', columnName: '_id' },
+```
 
 ### Things that might work to make this better:
 

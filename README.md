@@ -37,13 +37,13 @@ make dev
 ```
 Your app will be available at two addresses:
 
-#### backend: 
+#### Backend: 
 localhost:1337 => _Sails default_
 
-#### frontend:
+#### Frontend:
 localhost:5000 => _Svelte default_
 
-### don't forget to clean up after yourself
+### Don't forget to clean up after yourself
 ```bash
 make down
 # runs `docker-compose down` so you don't have volumes and images laying around everywhere

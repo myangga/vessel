@@ -89,17 +89,18 @@ updatedAt: { type: 'number', autoUpdatedAt: true, },
 id: { type: 'string', columnName: '_id' },
 ```
 
+## Notes to self
 ### Things that might work to make this better:
 
-[grunt-rollup](https://www.npmjs.com/package/grunt-rollup)
+[grunt-rollup](https://www.npmjs.com/package/grunt-rollup) - there might be a way to use this to integrate Svelte with the Sails app
 
-[Svelte Server-side component API](https://svelte.dev/docs#Server-side_component_API)
+[Svelte Server-side component API](https://svelte.dev/docs#Server-side_component_API) - maaaaybe.
 
-[Full stack development starter](https://medium.com/swlh/full-stack-development-starter-svelte-and-express-831aefee41c0)
+[Full stack development starter](https://medium.com/swlh/full-stack-development-starter-svelte-and-express-831aefee41c0) - might be able to do this.
 
-[Express Svelte template](https://github.com/somi92/express-svelte-template)
+[Express Svelte template](https://github.com/somi92/express-svelte-template) - might be able to follow somi92's lead
 
-[Svelte View Engine](https://www.npmjs.com/package/svelte-view-engine)
+[Svelte View Engine](https://www.npmjs.com/package/svelte-view-engine) - maaaaybe.
 
 ### or
 

@@ -1,6 +1,6 @@
-# Vessel
-![](./public/submarine.svg)
-
+<div align="center">
+    <img src="./public/submarine.svg" alt="Some type of underwater vessel" title="vessel" />
+</div>
 ##### This is an experiment. Please don't use this for anything important unless you know what you're doing!
 
 ## If you do want to use this, here's how to get going

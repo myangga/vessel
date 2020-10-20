@@ -7,34 +7,36 @@
 ## If you do want to use this, here's how to get going
 
 ### Grab this repository and `cd` into whatever folder you put it into
-```bash
+```shell
 npx degit nemo-omen/vessel
-# or `git clone https://github.com/nemo-omen/vessel.git`
-# but `degit` will remove the extra git stuff so you just have a clean project
+```
 
+```shell
 cd vessel
 ```
 
 ### Install the dependencies
-```bash
+```shell
 make install
-# runs a makefile that installs dependencies from both the main project folder
-# and the `api` folder wile using `docker-compose` to create a volume for the 
-# dockerized dev environment that comes with running the next step
-
-# Alternatively, if you don't want to work in a dockerized environment, you can 
-# `npm install` once in the main directory, and once in the `/api` directory
 ```
+Runs a Makefile that installs dependencies from both the main project folder
+and the `api` folder wile using `docker-compose` to create a volume for the 
+dockerized dev environment that comes with running the next step.
+
+Alternatively, if you don't want to work in a dockerized environment, you can 
+`npm install` once in the main directory, and once in the `/api` directory.
 
 ### Run the app in development
-```bash
+```shell
 make dev
-# runs `docker-compose --remove-orphans` without all the typing, setting up a dev environment
-# one day I may put all of the base project files into a container, we'll see.
-
-# If you're forgoing the virtual docker environment, you can also run `npm run all`
-# from the project's root directory.
 ```
+Runs `docker-compose --remove-orphans` without all the typing, setting up a dev environment
+
+One day I may put all of the base project files into a container, we'll see.
+
+If you're forgoing the virtual docker environment, you can also run `npm run all`
+from the project's root directory.
+
 Your app will be available at two addresses:
 
 #### Backend: 
@@ -44,7 +46,7 @@ localhost:1337 => _Sails default_
 localhost:5000 => _Svelte default_
 
 ### Don't forget to clean up after yourself
-```bash
+```shell
 make down
 # runs `docker-compose down` so you don't have volumes and images laying around everywhere
 ```

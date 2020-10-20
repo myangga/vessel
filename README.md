@@ -8,11 +8,11 @@
 
 ### Grab this repository and `cd` into whatever folder you put it into
 ```shell
-npx degit nemo-omen/vessel
+npx degit nemo-omen/vessel mycoolproject
 ```
 
 ```shell
-cd vessel
+cd mycoolproject
 ```
 
 ### Install the dependencies

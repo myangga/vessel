@@ -1,0 +1,11 @@
+version: '2'
+services:
+    base:
+        image: node:14.14.0-buster
+        volumes:
+            - .:/usr/src/app
+        working_dir: /usr/src/app
+    install:
+        extends:
+            service: base
+        command: bash -c "npm install -g sails && npm i && cd api && npm i"

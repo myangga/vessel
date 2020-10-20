@@ -1,0 +1,24 @@
+# Please run all npm installs using the included Makefile
+# bash command => `make install`
+version: '3'
+services: 
+    dev:
+        image: node:14.14.0-buster
+        volumes:
+            - .:/usr/src/app
+        working_dir: /usr/src/app
+        command: npm run all
+        ports:
+            - 1337:1337
+            - 5000:5000
+            - 35729:35729
+        depends_on: 
+            - mongo
+    mongo:
+        image: mongo
+        ports:
+            - 27018:27017
+        volumes:
+            - data-volume:/data/db
+volumes:
+    data-volume:

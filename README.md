@@ -10,7 +10,7 @@ Vessel is a starter template that puts [Svelte](http://www.svelte.dev) and [Sail
 
 ### Grab this repository and `cd` into whatever folder you put it into
 ```shell
-npx degit nemo-omen/vessel mycoolproject
+npx degit nemo-omen/vessel#main mycoolproject
 ```
 
 ```shell

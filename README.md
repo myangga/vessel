@@ -37,9 +37,11 @@ make dev
 ```
 Your app will be available at two addresses:
 
-backend: localhost:1337 => _Sails default_
+#### backend: 
+localhost:1337 => _Sails default_
 
-frontend: localhost:5000 => _Svelte default_
+#### frontend:
+localhost:5000 => _Svelte default_
 
 ### don't forget to clean up after yourself
 ```bash

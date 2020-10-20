@@ -37,12 +37,12 @@ One day I may put all of the base project files into a container, we'll see.
 If you're forgoing the virtual docker environment, you can also run `npm run all`
 from the project's root directory.
 
-Your app will be available at two addresses:
+#### Your app will be available at two addresses:
 
-#### Backend: 
+##### Backend: 
 localhost:1337 => _Sails default_
 
-#### Frontend:
+##### Frontend:
 localhost:5000 => _Svelte default_
 
 ### Don't forget to clean up after yourself

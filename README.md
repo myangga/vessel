@@ -124,7 +124,12 @@ onMount(() => {
     updateHats();
 });
 ```
+## So, why Sails?
+Aside from the ability to prototype an app really, really quickly, Sails enables some freedom that something like Meteor doesn't — simple, custom socket messages. Feathers would probably be okay for this as well but I, personally, had some difficulty matching the code in their documentation to the code their CLI was generating.
 
+The documentation on the Sails site can take a little while to get through, but it's on-point.
+
+And then there's the documentation on the code that Sails generates for you. It's just amazing. I don't think I've seen more thoroughly documented code. Kudos to the good people at Sailsjs!
 
 ## Notes to self
 ### Things that might work to make this better:

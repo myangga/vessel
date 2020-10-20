@@ -110,5 +110,3 @@ Just bundle the Svelte app into the `assets/` directory
 [machine-as-actions](https://github.com/sailshq/machine-as-action) - Sails uses this for their controllers
 
 [node machine](https://node-machine.org/) - Sails uses this architecture for the controllers
-
-Icons made by <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>

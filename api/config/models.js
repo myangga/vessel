@@ -35,7 +35,7 @@ module.exports.models = {
   *                                                                          *
   ***************************************************************************/
 
-  schema: true,
+  schema: false,
 
 
   /***************************************************************************
@@ -71,7 +71,7 @@ module.exports.models = {
   attributes: {
     createdAt: { type: 'number', autoCreatedAt: true, },
     updatedAt: { type: 'number', autoUpdatedAt: true, },
-    id: { type: 'number', autoIncrement: true, },
+    id: { type: 'string', columnName: '_id' },
     //--------------------------------------------------------------------------
     //  /\   Using MongoDB?
     //  ||   Replace `id` above with this instead:
@@ -101,7 +101,7 @@ module.exports.models = {
   ******************************************************************************/
 
   dataEncryptionKeys: {
-    default: 'tAuATqBPcaaUUeAuMJc8paMsxzfIOLKrCgYFJWVeZfc='
+    default: 'n4CTdB3jMkr4Fp444enDLzPGRlpz98phDOhkqMIUXXs='
   },
 
 

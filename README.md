@@ -2,6 +2,8 @@
 
 ## Sails and Svelte
 
+# This is an experiment. Please don't use this for anything important!
+
 ### Things that might work:
 
 [grunt-rollup](https://www.npmjs.com/package/grunt-rollup)

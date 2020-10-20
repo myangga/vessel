@@ -17,10 +17,11 @@
     "svelte": "^3.0.0"
   },
   "dependencies": {
-    "sirv-cli": "^1.0.0",
-    "tinro": "^0.3.7",
     "@feathersjs/client": "^4.5.9",
+    "animejs": "^3.2.1",
+    "sails.io.js": "^1.2.1",
+    "sirv-cli": "^1.0.0",
     "socket.io-client": "^2.3.1",
-    "animejs": "^3.2.1"
+    "tinro": "^0.3.7"
   }
 }

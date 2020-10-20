@@ -1,11 +1,17 @@
 <script>
+	import { socket } from './socket.js';
 	export let name;
+
+	socket.on('connect', () => {
+		console.log('Events are working');
+	});
 </script>
 
 <main>
 	<h1>Hello {name}!</h1>
 	<div class="vessel">
-		<svg height="90" viewBox="0 0 60 54" width="90" xmlns="http://www.w3.org/2000/svg"><g id="Page-1" fill="none" fill-rule="evenodd">
+	<img src="submarine.svg" alt="A Yellow Underwater Vessel" title="Vessel">
+	<!--	<svg height="90" viewBox="0 0 60 54" width="90" xmlns="http://www.w3.org/2000/svg"><g id="Page-1" fill="none" fill-rule="evenodd">
 		<g id="008---Submarine" fill-rule="nonzero">
 			<g id="Icons" transform="translate(1 8)">
 				<path id="Shape" d="m19.549 42h23.451c8.2842712 0 15-6.7157288 15-15s-6.7157288-15-15-15h-23.451c-3.5806944-.0000729-7.0432981 1.280757-9.762 3.611l-8.387 7.189c-.888551.7600107-1.40007693 1.8707527-1.4 3.04v2.32c-.00007693 1.1692473.511449 2.2799893 1.4 3.04l8.39 7.192c2.7183444 2.3284875 6.1797193 3.6081925 9.759 3.608z" fill="#ffdc00"/>
@@ -40,7 +46,7 @@
 			</g>
 		</g>
 		</g>
-		</svg>
+		</svg> -->
 	</div>
 	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
 	<p>Visit the <a href="https://sailsjs.com/whats-that">Sails site</a> to learn how to build Sails apps.</p>

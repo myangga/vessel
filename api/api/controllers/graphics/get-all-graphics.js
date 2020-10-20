@@ -1,14 +1,14 @@
 module.exports = {
 
 
-  friendlyName: 'Fet all graphics',
+  friendlyName: 'Get all graphics',
 
 
-  description: '',
+  description: 'Get all documents in the graphics collection',
 
 
   inputs: {
-
+    
   },
 
 

@@ -2,3 +2,7 @@ node_modules/
 /public/build/
 
 .DS_Store
+
+
+api/.tmp
+api/config/local.js

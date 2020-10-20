@@ -4,7 +4,70 @@
 
 # This is an experiment. Please don't use this for anything important!
 
-### Things that might work:
+## If you do want to use this, here's how to get going
+
+### Grab this repository and `cd` into whatever folder you put it into
+```bash
+npx degit nemo-omen/vessel
+# or `git clone https://github.com/nemo-omen/vessel.git`
+# but `degit` will remove the extra git stuff so you just have a clean project
+
+cd vessel
+```
+
+### Install the dependencies
+```bash
+make install
+# runs a makefile that installs dependencies from both the main project folder
+# and the `api` folder wile using `docker-compose` to create a volume for the 
+# dockerized dev environment that comes with running the next step
+
+# Alternatively, if you don't want to work in a dockerized environment, you can 
+# `npm install` once in the main directory, and once in the `/api` directory
+```
+
+### Run the app in development
+```bash
+make dev
+# runs `docker-compose --remove-orphans` without all the typing, setting up a dev environment
+# one day I may put all of the base project files into a container, we'll see.
+
+# If you're forgoing the virtual docker environment, you can also run `npm run all`
+# from the project's root directory.
+```
+Your app will be available at two addresses:
+
+backend: localhost:1337 => _Sails default_
+
+frontend: localhost:5000 => _Svelte default_
+
+### don't forget to clean up after yourself
+```bash
+make down
+# runs `docker-compose down` so you don't have volumes and images laying around everywhere
+```
+## Config
+Default Sails config _mostly_ matches what you would get if you were to run `sails new <appname> --no-frontend`. Some changes have been made in order to make development faster.
+
+### mongodb
+You'll want to update the configured mongodb settings located in `/api/config/datastores.js`. Currently the default is set to `sails-mongodb` and the url is `mongodb://mongo/test`. If you like things to be super-easy, just change `test` to whatever you want you database to be named.
+
+The `docker-compose.yml` included in this project spins up a mongo image, which is exposed at port `27018` rather than the default port of `27017`. This is to keep it from conflicting with any local mongo instances.
+
+This mongo container is then accessed via `mongodb://mongo/<databasename>`
+
+### Sails blueprint auto routes are on by default and schema has been turned off
+
+Sails `config.blueprints.actions` and `config.blueprints.rest` are enabled by default. That means if you navigate to the `/api` folder and run `sails generate api hats` you'll be able to access the api at conventional REST endpoints:
+
+GET: `http://localhost:1337/hats` -> returns all hats
+GET: `http://localhost:1337/hats/abcdefg123` -> returns one hat
+POST: `http://localhost:1337/hats` -> creates a hat, returns the created document
+PATCH: `http://localhost:1337/hats/abcdefg123` -> updates a hat, returns the updated document
+PUT: `http://localhost:1337/hats/abcdefg123` -> updates a hat, returns the updated document -- but Sails will tell you it prefers you to use `PATCH`
+DELETE: `http://localhost:1337/hats/abcdefg123` -> deletes a hat, returns the deleted document
+
+### Things that might work to make this better:
 
 [grunt-rollup](https://www.npmjs.com/package/grunt-rollup)
 

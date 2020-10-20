@@ -9,9 +9,9 @@ services:
         working_dir: /usr/src/app
         command: npm run all
         ports:
-            - 1337:1337
-            - 5000:5000
-            - 35729:35729
+            - 1337:1337 #sails
+            - 5000:5000 #svelte
+            - 35729:35729 #livereload
         depends_on: 
             - mongo
     mongo:

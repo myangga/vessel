@@ -2,9 +2,11 @@
     <img src="./public/submarine.svg" alt="Some type of underwater vessel" title="vessel" />
 </div>
 
-##### This is an experiment. Please don't use this for anything important unless you know what you're doing!
+Vessel is a starter template that puts [Svelte](http://www.svelte.dev) and [Sails](http://www.sailsjs.com) together with [Docker](http://www.docker.com). It's a fun setup for making apps quickly with plenty of room to grow.
 
-## If you do want to use this, here's how to get going
+## Usage
+
+##### As of now, there are no built-in methods for deployment. This is mainly meant as a development environment setup.
 
 ### Grab this repository and `cd` into whatever folder you put it into
 ```shell

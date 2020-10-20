@@ -1,8 +1,5 @@
 # Vessel
-
-## Sails and Svelte
-
-### This is an experiment. Please don't use this for anything important unless you know what you're doing!
+##### This is an experiment. Please don't use this for anything important unless you know what you're doing!
 
 ## If you do want to use this, here's how to get going
 

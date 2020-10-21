@@ -100,7 +100,7 @@ id: { type: 'string', columnName: '_id' },
 ### (the good stuff)
 Because Sails automatically maps websocket calls made through the `sails.io` connection, realtime updates of your data are super-easy.
 
-Here's an easy way to do it:
+Here's one way to do it:
 ```js
 import { onMount } from 'svelte';
 import { socket } from './socket.js' //this is the connection set up at the root of the Svelte app
@@ -109,7 +109,7 @@ $: hats = []; // a nice, reactive, but empty, array to hold all your hats
 
 async function updateHats() {
     // Sails maps REST verbs to methods on the sails.io.socket
-    // so, if you emit 'get' on the socket, with the route you want to get from
+    // so, if you emit 'get' on the socket, with the route you want to get hats from
     // Sails will give you what you're looking for over the websocket connection
 
     socket.get('/hats', (body, response) => {
@@ -117,9 +117,9 @@ async function updateHats() {
     });
 }
 
-//Sails will emit messages when anything happens one of your blueprint models
-// so, listen for changes on the name of your blueprint model, in this case 'hats'
-// calling the updateHats() function when changes happen should ensure data is synced
+//Sails will emit messages when anything happens to one of your blueprint models
+// so, listening for changes on the name of your blueprint model, in this case 'hats',
+// and calling the updateHats() function when changes happen should ensure data is synced
 socket.on('hats', () => {
     updateHats();
 })

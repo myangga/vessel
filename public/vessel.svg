@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="UTF-8">
-	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 100">
+	<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 100" width="600" height="100">
 		<style>
 			.vessel {
 				fill: #ff9801;
-				font-family: Arial, Helvetica, sans-serif';
+				font-family: 'Arial', 'Helvetica', sans-serif;
 				font-weight: 100;
 				font-size: 100px;
 			}
 		</style>
+		<g>
 			<text x="20" y="80" class="vessel">VESSEL</text>
+		</g>
 	</svg>
-</xml>

@@ -25,10 +25,10 @@ cd mycoolproject
 make install
 ```
 Runs a Makefile that installs dependencies from both the main project folder
-and the `api` folder wile using `docker-compose` to create a volume for the 
+and the `api` folder wile using `docker-compose` to create a volume for the
 dockerized dev environment that comes with running the next step.
 
-Alternatively, if you don't want to work in a dockerized environment, you can 
+Alternatively, if you don't want to work in a dockerized environment, you can
 `npm install` once in the main directory, and once in the `/api` directory.
 
 ### Run the app in development
@@ -44,7 +44,7 @@ from the project's root directory.
 
 #### Your app will be available at two addresses:
 
-##### Backend: 
+##### Backend:
 localhost:1337 => _Sails default_
 
 ##### Frontend:
@@ -117,6 +117,16 @@ async function updateHats() {
 
     socket.get('/hats', (body, response) => {
         hats = [...body];
+    });
+}
+
+async function createHat(hatData) {
+    socket.post('/hats', hatData, (resData, jwRes) => {
+        if(jwRes.statusCode !== 200) {
+            console.log("Oops! We couldn't save the hat for some reason." )
+        } else {
+            updateHats(); // right now
+        }
     });
 }
 

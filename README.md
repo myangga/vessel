@@ -68,10 +68,15 @@ You can change these settings in `/api/config/blueprints.js`.
 Sails `config.blueprints.actions` and `config.blueprints.rest` are enabled by default. That means if you navigate to the `/api` folder and run `sails generate api hats` you'll be able to access the api at conventional REST endpoints:
 
 GET: `http://localhost:1337/hats` -> returns all hats
+
 GET: `http://localhost:1337/hats/abcdefg123` -> returns one hat
+
 POST: `http://localhost:1337/hats` -> creates a hat, returns the created document
+
 PATCH: `http://localhost:1337/hats/abcdefg123` -> updates a hat, returns the updated document
+
 PUT: `http://localhost:1337/hats/abcdefg123` -> updates a hat, returns the updated document -- but Sails will tell you it prefers you to use `PATCH`
+
 DELETE: `http://localhost:1337/hats/abcdefg123` -> deletes a hat, returns the deleted document
 
 ### Models config

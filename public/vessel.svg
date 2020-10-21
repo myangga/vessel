@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8">
+	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 100">
+		<style>
+			.vessel {
+				fill: #ff9801;
+				font-family: Arial, Helvetica, sans-serif';
+				font-weight: 100;
+				font-size: 100px;
+			}
+		</style>
+			<text x="20" y="80" class="vessel">VESSEL</text>
+	</svg>
+</xml>

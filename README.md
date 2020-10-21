@@ -1,5 +1,7 @@
 <div align="center">
     <img src="./public/submarine.svg" alt="Some type of underwater vessel" title="VESSEL" />
+</div>
+<div align="center">
     <img src="./public/vessel.svg" alt="VESSEL" title="VESSEL" />
 </div>
 

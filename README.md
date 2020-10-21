@@ -1,5 +1,6 @@
 <div align="center">
     <img src="./public/submarine.svg" alt="Some type of underwater vessel" title="vessel" />
+    <h1 style="font-size: 3rem; font-weight: 100; color: ff9801">VESSEL</h1>
 </div>
 
 Vessel is a starter template that puts [Svelte](http://www.svelte.dev) and [Sails](http://www.sailsjs.com) together with [Docker](http://www.docker.com). It's a fun setup for making apps quickly with plenty of room to grow.

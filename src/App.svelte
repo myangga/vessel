@@ -1,5 +1,6 @@
 <script>
 	import { socket } from './socket.js';
+	import Hats from './components/Hats.svelte';
 	export let name;
 
 	socket.on('connect', () => {
@@ -9,6 +10,7 @@
 
 <main>
 	<h1>Hello {name}!</h1>
+	<Hats />
 	<div class="vessel">
 	<img src="submarine.svg" alt="A Yellow Underwater Vessel" title="Vessel">
 	</div>
@@ -34,10 +36,10 @@
 	.vessel {
 		margin: 7em 0;
 	}
-	.icon-credit {
+	/* .icon-credit {
 		margin-top: 10em;
 		font-size: 0.7rem;
-	}
+	} */
 	.and {
 		font-weight: 100;
 		color: #0178ff;
